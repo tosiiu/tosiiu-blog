@@ -1,15 +1,15 @@
 module.exports = {
   pathPrefix: `/blog`,
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `tosiiu blog`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `tosiiu`,
+      summary: `UI/UXデザイナー。アプリ開発したりもする人。ガジェットとインターネットが好き。`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
+    description: `UI/UXデザイナーの好きなものをおすすめしたりするブログ。`,
+    siteUrl: `https://blog.tosiiu.com/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `tosiiu`,
     },
   },
   plugins: [
@@ -61,13 +61,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `tosiiu blog`,
+        short_name: `tosiiuBlog`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `content/assets/blog-icon.png`,
       },
     },
     `gatsby-plugin-react-helmet`,
