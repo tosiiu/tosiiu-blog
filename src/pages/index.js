@@ -38,21 +38,13 @@ const BlogIndex = ({ data, location }) => {
                 itemType="http://schema.org/Article"
               >
                 <div>
-                  <p className="text-gray-500 text-xs">{post.frontmatter.date}</p>
                   <p className="text-xl font-bold">
                     <Link to={post.fields.slug} itemProp="url">
                       <span itemProp="headline">{title}</span>
                     </Link>
                   </p>
                 </div>
-                <section>
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: post.frontmatter.description || post.excerpt,
-                    }}
-                    itemProp="description"
-                  />
-                </section>
+                <p className="text-gray-500 text-xs">{post.frontmatter.date}</p>
               </article>
             </li>
           )
@@ -81,7 +73,6 @@ export const pageQuery = graphql`
         frontmatter {
           date(formatString: "YYYY年MM月DD日")
           title
-          description
         }
       }
     }
