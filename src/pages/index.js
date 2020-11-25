@@ -39,14 +39,22 @@ const BlogIndex = ({ data, location }) => {
                 itemType="http://schema.org/Article"
               >
                 <div>
-                  <Image fluid={post.frontmatter.hero.childImageSharp.fluid}/>
-                  <p className="text-lg font-bold">
-                    <Link to={post.fields.slug} itemProp="url">
-                      <span itemProp="headline">{title}</span>
-                    </Link>
-                  </p>
+                  <Link to={post.fields.slug} itemProp="url">
+                    <div className="flex space-x-3">
+                      <div className="h-24">
+                        <Image
+                        className="object-cover h-full w-20"
+                        fluid={post.frontmatter.hero.childImageSharp.fluid}/>
+                      </div>
+                      <div>
+                        <p className="text-lg font-bold">
+                          <span itemProp="headline">{title}</span>
+                        </p>
+                        <p className="text-gra y-500 text-xs">{post.frontmatter.date}</p>
+                      </div>
+                    </div>
+                  </Link>
                 </div>
-                <p className="text-gray-500 text-xs">{post.frontmatter.date}</p>
               </article>
             </li>
           )
